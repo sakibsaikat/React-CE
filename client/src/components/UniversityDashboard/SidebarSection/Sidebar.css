@@ -1,0 +1,163 @@
+:root {
+  --PrimaryColor: hsl(94, 59%, 35%);
+  --HoverColor: #bdf094;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.sidebar {
+  background: var(--whiteColor);
+  box-shadow: 1px 0 4px var(--grayText);
+  width: 18%;
+  height: 100%;
+  gap: 3rem;
+  overflow: auto;
+}
+.sidebar .logoDiv {
+  padding: 1.5rem 1.5rem 0;
+  cursor: pointer;
+}
+.sidebar .logoDiv img {
+  max-width: 20px;
+  margin-right: 0.5rem;
+  background: var(--inputColor);
+  border-radius: 2px;
+  padding: 0.2rem;
+}
+.sidebar .logoDiv h2 {
+  font-size: var(--h2FontSize);
+  color: var(--PrimaryColor);
+}
+.sidebar .menuDiv .divTitle, .sidebar .settingDiv .divTitle {
+  font-size: var(--h3FontSize);
+  color: var(--blackColor);
+  padding: 0 1.5rem 1.5rem;
+}
+.sidebar .menuDiv .menuLists .listItem, .sidebar .settingDiv .menuLists .listItem {
+  padding: 0.2rem 1.5rem;
+  width: 100%;
+  position: relative;
+}
+.sidebar .menuDiv .menuLists .listItem::before, .sidebar .settingDiv .menuLists .listItem::before {
+  position: absolute;
+  content: "";
+  height: 0%;
+  left: 0;
+  width: 5px;
+  bottom: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--PrimaryColor);
+}
+.sidebar .menuDiv .menuLists .listItem .menuLink, .sidebar .settingDiv .menuLists .listItem .menuLink {
+  color: var(--grayText);
+  font-weight: 500;
+}
+.sidebar .menuDiv .menuLists .listItem .menuLink .icon, .sidebar .settingDiv .menuLists .listItem .menuLink .icon {
+  margin-right: 0.5rem;
+}
+.sidebar .menuDiv .menuLists .listItem:hover .menuLink, .sidebar .settingDiv .menuLists .listItem:hover .menuLink {
+  color: var(--PrimaryColor);
+  transition: 0;
+}
+.sidebar .menuDiv .menuLists .listItem:hover::before, .sidebar .settingDiv .menuLists .listItem:hover::before {
+  height: 100%;
+  transition: 0.3s ease;
+}
+.sidebar .menuDiv .menuLists .listItem.selected, .sidebar .settingDiv .menuLists .listItem.selected {
+  padding: 0.2rem 1.5rem;
+  width: 100%;
+  position: relative;
+}
+.sidebar .menuDiv .menuLists .listItem.selected::before, .sidebar .settingDiv .menuLists .listItem.selected::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  left: 0;
+  width: 5px;
+  bottom: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--PrimaryColor);
+}
+.sidebar .menuDiv .menuLists .listItem.selected .menuLink, .sidebar .settingDiv .menuLists .listItem.selected .menuLink {
+  color: var(--PrimaryColor);
+  transition: 0;
+  font-weight: 500;
+}
+.sidebar .menuDiv .menuLists .listItem.selected .menuLink .icon, .sidebar .settingDiv .menuLists .listItem.selected .menuLink .icon {
+  margin-right: 0.5rem;
+}
+.sidebar .sideCard {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+.sidebar .sideCard .icon {
+  position: absolute;
+  background: var(--HoverColor);
+  border: 10px solid var(--whiteColor);
+  font-size: 3rem;
+  border-radius: 50%;
+  top: -8px;
+  right: 50%;
+  transform: translate(50%);
+  z-index: 100;
+}
+.sidebar .sideCard .cardContent {
+  position: relative;
+  padding: 1rem;
+  background: var(--HoverColor);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sidebar .sideCard .cardContent h3 {
+  font-size: var(--h2FontSize);
+  margin-top: 1rem;
+  padding: 1rem 0;
+  font-weight: 800;
+  color: var(--blackColor);
+}
+.sidebar .sideCard .cardContent p {
+  font-size: var(--normalFontSize);
+  color: var(--textColor);
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+.sidebar .sideCard .cardContent .btn {
+  position: relative;
+  color: var(--textColor);
+  z-index: 1000;
+}
+.sidebar .sideCard .cardContent .circle1, .sidebar .sideCard .cardContent .circle2 {
+  position: absolute;
+  background: var(--paleGreen);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.sidebar .sideCard .cardContent .circle1 {
+  height: 100px;
+  width: 100px;
+  top: -50px;
+  left: -50px;
+}
+.sidebar .sideCard .cardContent .circle2 {
+  height: 150px;
+  width: 150px;
+  bottom: -80px;
+  right: -70px;
+  z-index: 1;
+}/*# sourceMappingURL=Sidebar.css.map */
